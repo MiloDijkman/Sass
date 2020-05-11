@@ -1,0 +1,49 @@
+nav {
+  background-color: #ddd;
+  position: absolute;
+  a{
+    text-decoration: none;
+    display: block;
+    padding: .5em 5em .5em 2em;
+    border-bottom: 1px solid #fff;
+    color: $tweede-kleur-donker;
+  }
+  a.actief{
+    border-bottom: 4px solid $contrast;
+  }
+}
+
+#haal-menu:checked ~ .container {
+  left: 10em;
+}
+
+#haal-menu:checked ~ .menu-halen .fa-times {
+  display: inline-block;
+}
+
+#haal-menu:checked ~ .menu-halen .fa-bars {
+  display: none;
+}
+
+.fa-bars{
+  display: inline-block;
+}
+
+.fa-times {
+  display: none;
+}
+
+#haal-menu {
+  display: none;
+}
+
+.menu-halen {
+  float: right;
+  cursor: pointer;
+  font-size: 1.5em;
+  padding: .3em 2rem .3em 5em;
+}
+
+@media screen and (min-width: 750px) {
+  @import 'nav-hori';
+}
